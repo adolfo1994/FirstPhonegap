@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function show1 () {
+      var div = document.getElementById('load1');
+      div.style.display = "block";
+      setTimeout(hide1,5000);
+    }
+    function hide1(){
+      var div = document.getElementById('load1');
+      div.style.display = "none";
+      var msg = document.getElementById('msg1');
+      msg.innerHTML = "<h2>Did you like it?</h2>"
+    }
+    function show2 () {
+      var div = document.getElementById('load2');
+      div.style.display = "block";
+      setTimeout(hide2,5000);
+    }
+    function hide2(){
+      var div = document.getElementById('load2');
+      div.style.display = "none";
+      var msg = document.getElementById('msg2');
+      msg.innerHTML = "<h2>Did you like it?</h2>"
+      
+    }
+  
+    </script>
+
+    <style type="text/css">
+    body, html {
+      height:100%;
+    }
+    div.row{
+      height: 100%;
+    }
+    div.container{
+      height: 100%;
+    }
+     div.col-md-6{
+      text-align: center;
+      height: 100%;
+      color: #FFF;
+     }
+     div.l1{
+      height: 100%;
+      background-color: #2E2E2E; 
+     }
+     div.l2{
+      height: 100%;
+      background-color: #201E1E; 
+     }     
+     img{
+      height: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+     }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 l1">
+        <h1>Loading Image 1</h1>
+        <button class="btn btn-lg btn-primary" onclick="show1();"> Try this one </button>
+        <img src="img/loading.gif" style="display:none;" id="load1">
+        <div id="msg1"></div>
+      </div>
+      <div class="col-md-6 l2">
+        <h1>Loading Image 2</h1>
+        <button class="btn btn-lg btn-primary" onclick="show2();"> Try this one </button>
+        <img src="img/loading2.gif" style="display:none;" id="load2">
+        <div id="msg2"></div>
+      </div>
+    </div>  
+  </div>
+  </body>
+</html>
